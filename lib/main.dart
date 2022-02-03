@@ -1,6 +1,9 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio_app/screens/home_screen.dart';
+import 'package:portfolio_app/screens/home/home_screen.dart';
+import 'package:portfolio_app/screens/main_screen.dart';
 
 import 'constants.dart';
 
@@ -9,7 +12,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
