@@ -20,7 +20,10 @@ class MainScreen extends StatelessWidget {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: Icon(Icons.menu),
+            icon:const Icon(
+              Icons.menu,
+              color:primaryColor
+            ),
           )
         )
       ),
@@ -28,10 +31,14 @@ class MainScreen extends StatelessWidget {
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: ListView(
-          children: [
-            ...children
-          ]
+        child: SingleChildScrollView(
+
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ...children
+            ],
+          )
         ),
       ),
     );
