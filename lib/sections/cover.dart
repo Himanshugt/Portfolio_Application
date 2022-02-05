@@ -96,13 +96,13 @@ class SocialPlatformPanel extends StatelessWidget {
       children: [
         SizedBox(height:50+(3*MediaQuery.of(context).size.height/16)),
         IconButton(
-            onPressed: () async {
-              _launchURL(_instagramURL);
-            },
-            icon: const Icon(
-              FontAwesomeIcons.instagram,
-              size: 34
-            )),
+          onPressed: () async {
+            _launchURL(_instagramURL);
+          },
+          icon: const Icon(
+            FontAwesomeIcons.instagram,
+            size: 34
+          )),
         SizedBox(height:35),
         IconButton(
           onPressed: () async {
@@ -115,22 +115,23 @@ class SocialPlatformPanel extends StatelessWidget {
         ),
         SizedBox(height:35),
         IconButton(
-            onPressed: () async {
-              _launchURL(_githubURL);
-            },
-            icon: const Icon(
-              FontAwesomeIcons.github,
-              size: 34
-            )),
+          onPressed: () async {
+            _launchURL(_githubURL);
+          },
+          icon: const Icon(
+            FontAwesomeIcons.github,
+            size: 34
+          )),
         SizedBox(height:35),
         IconButton(
-            onPressed: () async {
-              _launchURL(_twitterURL);
-            },
-            icon: const Icon(
-              FontAwesomeIcons.twitter,
-              size: 34
-            )),
+          onPressed: () async {
+            _launchURL(_twitterURL);
+          },
+          icon: const Icon(
+
+            FontAwesomeIcons.twitter,
+            size: 34
+          )),
     ]);
   }
 
