@@ -23,8 +23,9 @@ class Cover extends StatelessWidget {
         children: [
           SizedBox(width: MediaQuery.of(context).size.width/6),
           CoverIntro(),
-          SizedBox(width: 505),
-          SocialPlatformPanel()
+          Spacer(),
+          SocialPlatformPanel(),
+          SizedBox(width: MediaQuery.of(context).size.width/6), 
         ],
       ),
     );
