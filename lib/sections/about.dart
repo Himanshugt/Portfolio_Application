@@ -17,7 +17,7 @@ class About extends StatelessWidget {
   }) : super(key: key);
 
   final String about =
-    'I am Himanshu Gupta an undergrad in Electronics\nand Telecommunication from Indian Institute of\nEngineering Science and Technology, Shibpur.\n I have inclinations in Software development and\nApp development streams.\nI am Himanshu Gupta an undergrad in Electronics\nand Telecommunication from Indian Institute of\nEngineering Science and Technology, Shibpur.\n I have inclinations in Software development and\nApp development streams.';
+    'I am Himanshu Gupta an undergrad in Electronics\nand Telecommunication from Indian Institute of\nEngineering Science and Technology, Shibpur.\n I have inclinations in Software and\nApp development streams.\nI am Himanshu Gupta an undergrad in Electronics\nand Telecommunication from Indian Institute of\nEngineering Science and Technology, Shibpur.\n I have inclinations in Software development and\nApp development streams.';
 
 
   @override
@@ -31,7 +31,7 @@ class About extends StatelessWidget {
           child: Center(
             child: Text(
               'About',
-              style: Theme.of(context).textTheme.headline3.copyWith(color: primaryColor)
+              style: Theme.of(context).textTheme.headline4.copyWith(color: primaryColor)
             ),
           ),
         ),
