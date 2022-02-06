@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_app/constants.dart';
 import 'package:portfolio_app/screens/components/skill_indicator.dart';
 import 'package:portfolio_app/sections/about.dart';
+import 'package:portfolio_app/sections/contact.dart';
 import 'package:portfolio_app/sections/cover.dart';
 import 'package:portfolio_app/screens/main_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -45,10 +46,14 @@ class _HomeScreenState extends State<HomeScreen> {
       Projects(),
       SizedBox(height: 75),
       CustomDivider(),
-      SizedBox(height: 75)
+      SizedBox(height: 75),
+      Contact(),
+      SizedBox(height: 75),
     ]);
   }
 }
+
+
 
 class CustomDivider extends StatelessWidget {
   const CustomDivider({
