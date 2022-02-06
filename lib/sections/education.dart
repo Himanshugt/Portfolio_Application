@@ -34,7 +34,7 @@ class Education extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .headline4
-                      .copyWith(color: primaryColor)),
+                      .copyWith(color: primaryColor, fontWeight:FontWeight.bold)),
             ),
           ),
           Container(
@@ -123,25 +123,25 @@ class EducationCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(education,
-                  style: Theme.of(context).textTheme.headline6.copyWith(
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(
                       color: bodyTextColor, fontWeight: FontWeight.w200)),
               Text(
                   schoolName,
-                  style: Theme.of(context).textTheme.headline5.copyWith(
-                      color: primaryColor, fontWeight: FontWeight.bold)),
-              Text(year,
                   style: Theme.of(context).textTheme.headline6.copyWith(
-                      color: primaryColor, fontWeight: FontWeight.w200)),
+                      color: Colors.green[200], fontWeight: FontWeight.w400)),
+              Text(year,
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(
+                      color: Colors.green[200], fontWeight: FontWeight.w200)),
               if(department!=null)
                 Text(
                   department,
-                  style: Theme.of(context).textTheme.headline6.copyWith(
+                  style: Theme.of(context).textTheme.subtitle1.copyWith(
                     color: bodyTextColor, fontWeight: FontWeight.w200
                   )
                 ),
               Text(
                 grade,
-                style: Theme.of(context).textTheme.headline6.copyWith(
+                style: Theme.of(context).textTheme.subtitle1.copyWith(
                   color: bodyTextColor, fontWeight: FontWeight.w200)),
             ],
           ),

@@ -26,7 +26,7 @@ class Skills extends StatelessWidget {
         children: [
           Text(
             'Skills',
-            style: Theme.of(context).textTheme.headline4.copyWith(color: primaryColor)
+            style: Theme.of(context).textTheme.headline4.copyWith(color: primaryColor,fontWeight:FontWeight.bold)
           ),
           SizedBox(height: 75),
           Row(

@@ -31,13 +31,13 @@ class About extends StatelessWidget {
           child: Center(
             child: Text(
               'About',
-              style: Theme.of(context).textTheme.headline4.copyWith(color: primaryColor)
+              style: Theme.of(context).textTheme.headline4.copyWith(color: primaryColor,fontWeight:FontWeight.bold)
             ),
           ),
         ),
         Text(
           about,
-          style:Theme.of(context).textTheme.headline6,
+          style:Theme.of(context).textTheme.headline6.copyWith(color: bodyTextColor),
         ),
         SizedBox(width: MediaQuery.of(context).size.width/6),
       ],
