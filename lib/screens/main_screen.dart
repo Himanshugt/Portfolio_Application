@@ -31,14 +31,11 @@ class MainScreen extends StatelessWidget {
       body: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        child: SingleChildScrollView(
-
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ...children
-            ],
-          )
+        child: ListView(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ...children
+          ],
         ),
       ),
     );
