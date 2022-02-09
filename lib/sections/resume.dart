@@ -15,27 +15,16 @@ class Resume extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      color: primaryColor,
-      onPressed: () {},
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
+    return TextButton(
+      onPressed: () => {},
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical:12,horizontal:8),
-        child: Wrap(
-          children: [
-            Icon(
-              FontAwesomeIcons.download,
-              size: 20
-            ),
-            SizedBox(width:10),
-            Text(
-            'Download Resume',
-            style:Theme.of(context).textTheme.subtitle1.copyWith(fontWeight: FontWeight.w900),
-            ),
-          ]
+        padding: const EdgeInsets.only(right:25),
+        child: Text(
+          'DOWNLOAD CV',
+          style:
+              Theme.of(context).textTheme.headline6.copyWith(color: Colors.white,fontSize:18),
         ),
-      ) 
-      
+      ),
     );
   }
 }

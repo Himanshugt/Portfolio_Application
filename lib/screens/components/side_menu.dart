@@ -2,46 +2,63 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/constants.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-class SideMenu extends StatelessWidget {
+class SideMenu extends StatefulWidget {
   const SideMenu({
     Key key,
+    this.itemController,
   }) : super(key: key);
+
+  final ItemScrollController itemController;
+
+  @override
+  State<SideMenu> createState() => _SideMenuState();
+}
+
+class _SideMenuState extends State<SideMenu> {
+  void scrollToIndex(int index) {
+    widget.itemController.scrollTo(
+      index: index, 
+      duration: const Duration(seconds: 2),
+      curve: Curves.easeInOutCubic);
+  }
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: (MediaQuery.of(context).size.width)/7,
+      width: (MediaQuery.of(context).size.width) / 7,
       child: Drawer(
           child: Container(
-        padding: EdgeInsets.all(defaultPadding),
+        padding: const EdgeInsets.all(defaultPadding),
         color: secondaryColor,
         child: ListView(children: [
-          Text(
-            'Hey !',
-            style: Theme.of(context)
-                .textTheme
-                .headline4
-                .copyWith(color: Colors.white),
-          ),
           const SizedBox(height: 25),
-          const SideNavigation(title: 'About'),
-          const SideNavigation(title: 'Skills'),
-          const SideNavigation(title: 'Education'),
-          const SideNavigation(title: 'Projects'),
-          const SideNavigation(title: 'Contact'),
-          const SideNavigation(title: 'Download Resume'),
+          SideNavigation(title: 'About', scrollToIndex: scrollToIndex,index:4),
+          SideNavigation(title: 'Skills', scrollToIndex: scrollToIndex,index:8),
+          SideNavigation(title: 'Education', scrollToIndex: scrollToIndex,index:12),
+          SideNavigation(title: 'Projects', scrollToIndex: scrollToIndex,index:16),
+          SideNavigation(title: 'Contact', scrollToIndex: scrollToIndex,index:20),
+          SideNavigation(
+              title: 'Download Resume', scrollToIndex: scrollToIndex),
         ]),
       )),
     );
   }
 }
 
-class SideNavigation extends StatelessWidget {
-  const SideNavigation({key, this.title}) : super(key: key);
+class SideNavigation extends StatefulWidget {
+  const SideNavigation({key, this.title, this.scrollToIndex, this.index}) : super(key: key);
 
   final String title;
+  final Function scrollToIndex;
+  final int index;
 
+  @override
+  State<SideNavigation> createState() => _SideNavigationState();
+}
+
+class _SideNavigationState extends State<SideNavigation> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -50,31 +67,14 @@ class SideNavigation extends StatelessWidget {
       child: ListTile(
         selectedColor: Colors.green,
         title: Text(
-          title,
+          widget.title,
           style: Theme.of(context)
               .textTheme
               .headline6
               .copyWith(color: primaryColor),
         ),
-        onTap: () {
-          print('HEy');
-        },
+        onTap: widget.scrollToIndex(widget.index),
       ),
     );
   }
 }
-
-// TextButton(
-//       onPressed: () {},
-//       child: Container(
-//         padding: const EdgeInsets.symmetric(vertical: 10),
-//         width: double.infinity,
-//         child: Text(
-//           title,
-//           style: Theme.of(context)
-//               .textTheme
-//               .headline6
-//               .copyWith(color: primaryColor),
-//         ),
-//       )
-//     );

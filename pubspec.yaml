@@ -39,6 +39,8 @@ dependencies:
   animated_text_kit: ^4.2.1
   font_awesome_flutter: ^9.2.0
   url_launcher: ^6.0.18
+  scrollable_positioned_list: ^0.2.3
+  scroll_to_index: ^2.1.1
 
 
 dev_dependencies:

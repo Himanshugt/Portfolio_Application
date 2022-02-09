@@ -27,31 +27,31 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return MainScreen(children: [
-      Cover(),
-      CustomDivider(),
-      SizedBox(height: 75),
-      About(),
-      SizedBox(height: 75),
-      CustomDivider(),
-      SizedBox(height: 75),
-      Align(
-        alignment:Alignment.center,
-        child: Skills()),
-      SizedBox(height: 25),
-      CustomDivider(),
-      SizedBox(height: 75),
-      Align(alignment:Alignment.center,child: Education()),
-      SizedBox(height: 75),
-      CustomDivider(),
-      SizedBox(height: 75),
-      Align(alignment:Alignment.center,child: Projects()),
-      SizedBox(height: 75),
-      CustomDivider(),
-      SizedBox(height: 75),
-      Align(alignment:Alignment.center,child: Contact()),
-      SizedBox(height: 75),
-    ]);
+    return MainScreen(
+      children: [
+        Cover(),
+        CustomDivider(),
+        SizedBox(height: 75),
+        About(),
+        SizedBox(height: 75),
+        CustomDivider(),
+        SizedBox(height: 75),
+        Skills(),
+        SizedBox(height: 25),
+        CustomDivider(),
+        SizedBox(height: 75),
+        Education(),
+        SizedBox(height: 75),
+        CustomDivider(),
+        SizedBox(height: 75),
+        Projects(),
+        SizedBox(height: 75),
+        CustomDivider(),
+        SizedBox(height: 75),
+        Contact(),
+        SizedBox(height: 75),
+      ],
+    );
   }
 }
 
