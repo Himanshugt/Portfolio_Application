@@ -50,7 +50,7 @@ class _MainScreenState extends State<MainScreen> {
             )
         ),
         actions: [
-          AppBarButton(title: 'About', scrollToIndex: scrollToIndex, index: 3,alignment: 0.3),
+          AppBarButton(title: 'About', scrollToIndex: scrollToIndex, index: 3,alignment: 0.2),
           AppBarButton(title: 'Skills', scrollToIndex: scrollToIndex, index: 7,alignment: 0.001),
           AppBarButton(title: 'Education', scrollToIndex: scrollToIndex, index: 11,alignment: 0.13),
           AppBarButton(title: 'Projects', scrollToIndex: scrollToIndex, index: 15,alignment: 0.05),

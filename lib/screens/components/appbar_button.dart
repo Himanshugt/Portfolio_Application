@@ -32,7 +32,7 @@ class _AppBarButtonState extends State<AppBarButton> {
         child: Text(
           widget.title,
           style:
-              Theme.of(context).textTheme.headline6.copyWith(color: primaryColor),
+              Theme.of(context).textTheme.headline6.copyWith(color: primaryColor ,fontSize: 18),
         ),
       ),
     );

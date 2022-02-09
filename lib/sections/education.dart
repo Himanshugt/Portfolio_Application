@@ -44,7 +44,12 @@ class Education extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(height: MediaQuery.of(context).size.height / 18),
+                    Row(
+                      children: [
+                        Spacer(),
+                        Container(height: MediaQuery.of(context).size.height / 18,child: Text('SCROLL DOWN ↓',style: Theme.of(context).textTheme.subtitle1.copyWith(color:Colors.white))),
+                      ]
+                    ),
                     EducationCard(
                       education:'Bachelor of Technology Degree',
                       schoolName:'INDIAN INSTITUTE OF ENGINEERING SCIENCE AND TECHNOLOGY, SHIBPUR',

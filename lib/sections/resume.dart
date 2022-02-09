@@ -35,7 +35,7 @@ class Resume extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headline6
-              .copyWith(color: Colors.white, fontSize: 18),
+              .copyWith(color: Colors.white, fontSize: 16),
         ),
       ),
     );
