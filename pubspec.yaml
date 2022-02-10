@@ -41,6 +41,7 @@ dependencies:
   url_launcher: ^6.0.18
   scrollable_positioned_list: ^0.2.3
   scroll_to_index: ^2.1.1
+  flutter_native_splash: ^2.0.2
 
 
 dev_dependencies:
