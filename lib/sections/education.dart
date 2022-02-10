@@ -4,15 +4,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/constants.dart';
-import 'package:portfolio_app/screens/components/skill_indicator.dart';
-import 'package:portfolio_app/sections/about.dart';
-import 'package:portfolio_app/sections/cover.dart';
-import 'package:portfolio_app/screens/main_screen.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio_app/sections/resume.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:portfolio_app/sections/skills.dart';
 
 class Education extends StatelessWidget {
   const Education({
