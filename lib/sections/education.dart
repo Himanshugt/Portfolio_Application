@@ -75,7 +75,7 @@ class EducationCard extends StatelessWidget {
     return Container(
         margin: EdgeInsets.symmetric(horizontal:defaultPadding),
         // height: 4 * MediaQuery.of(context).size.height / 9,
-        width:double.infinity,
+        width:MediaQuery.of(context).size.width/2,
         decoration: BoxDecoration(
             color: bgColor,
             borderRadius: BorderRadius.circular(35),

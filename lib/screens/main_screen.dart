@@ -62,20 +62,17 @@ class _MainScreenState extends State<MainScreen> {
         child: Container(
           // color: Colors.white,
           constraints: const BoxConstraints(maxWidth:maxWidth),
-          child: Padding(
-            padding: EdgeInsets.only(left: maxWidth/6, right: maxWidth/6,),
-            // padding:EdgeInsets.only(left: MediaQuery.of(context).size.width/6, right: MediaQuery.of(context).size.width/6),
-            child: ScrollablePositionedList.builder(
-                itemScrollController: itemController,
-                itemCount: widget.children.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Align(
-                      alignment: Alignment.center,
-                      child: Container(
-                        child: widget.children[index],
-                      ));
-                }),
-          ),
+          child: ScrollablePositionedList.builder(
+              itemScrollController: itemController,
+              itemCount: widget.children.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      padding: EdgeInsets.only(left: maxWidth/6, right: maxWidth/6),
+                      child: widget.children[index],
+                    ));
+              }),
         ),
       ),
     );
