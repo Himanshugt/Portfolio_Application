@@ -20,12 +20,15 @@ class Cover extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       // width: MediaQuery.of(context).size.width,
       child: Row(
-        children: [
-          SizedBox(width: MediaQuery.of(context).size.width/6),
-          CoverIntro(),
-          Spacer(),
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: const [
+          // SizedBox(width: MediaQuery.of(context).size.width/6),
+          Expanded(
+            child: CoverIntro()
+          ),
+          // Spacer(),
           SocialPlatformPanel(),
-          SizedBox(width: MediaQuery.of(context).size.width/6), 
+          // SizedBox(width: MediaQuery.of(context).size.width/6), 
         ],
       ),
     );
@@ -44,7 +47,7 @@ class CoverIntro extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height:MediaQuery.of(context).size.height/4),
-        Text('Hi,\nI\'m Himanshu',
+        Text('Hi,\nI\'m Himashu',
             style: Theme.of(context).textTheme.headline2.copyWith(
               fontSize: 78,
               fontWeight: FontWeight.w900,
@@ -94,7 +97,7 @@ class SocialPlatformPanel extends StatelessWidget {
     return Column(
       // mainAxisAlignment: MainAxisAlignment.center, 
       children: [
-        SizedBox(height:50+(3*MediaQuery.of(context).size.height/16)),
+        SizedBox(height:MediaQuery.of(context).size.height/4),
         IconButton(
           onPressed: () async {
             _launchURL(_instagramURL);

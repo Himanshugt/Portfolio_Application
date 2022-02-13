@@ -54,20 +54,29 @@ class _MainScreenState extends State<MainScreen> {
           AppBarButton(title: 'Education', scrollToIndex: scrollToIndex, index: 11,alignment: 0.13),
           AppBarButton(title: 'Projects', scrollToIndex: scrollToIndex, index: 15,alignment: 0.05),
           AppBarButton(title: 'Contact', scrollToIndex: scrollToIndex, index: 19,alignment: 0.1),
-          Resume()
+          const Resume()
         ],
       ),
       // drawer: SideMenu(itemController: itemController),
-      body: ScrollablePositionedList.builder(
-          itemScrollController: itemController,
-          itemCount: widget.children.length,
-          itemBuilder: (BuildContext context, int index) {
-            return Align(
-                alignment: Alignment.center,
-                child: Container(
-                  child: widget.children[index],
-                ));
-          }),
+      body: Center(
+        child: Container(
+          // color: Colors.white,
+          constraints: const BoxConstraints(maxWidth:maxWidth),
+          child: Padding(
+            padding: EdgeInsets.only(left: MediaQuery.of(context).size.width/6, right: MediaQuery.of(context).size.width/6),
+            child: ScrollablePositionedList.builder(
+                itemScrollController: itemController,
+                itemCount: widget.children.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Align(
+                      alignment: Alignment.center,
+                      child: Container(
+                        child: widget.children[index],
+                      ));
+                }),
+          ),
+        ),
+      ),
     );
   }
 }
