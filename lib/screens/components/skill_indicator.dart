@@ -22,8 +22,8 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
       children: [
         Container(
           // aspectRatio: 1,
-          height: 125,
-          width: 125,
+          width: MediaQuery.of(context).size.width / 12,
+          height: MediaQuery.of(context).size.width / 12,
           child: TweenAnimationBuilder(
             tween: Tween<double>(begin: 0, end: percentage),
             duration: defaultDuration,

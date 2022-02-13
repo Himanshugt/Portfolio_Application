@@ -12,66 +12,49 @@ class Education extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 2 * MediaQuery.of(context).size.height / 3,
-      width: (2 * MediaQuery.of(context).size.width) / 3,
-      // color: Colors.white,
-      child: Row(
-        children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width / 3,
-            child: Center(
-              child: Text('Education',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline4
-                      .copyWith(color: primaryColor, fontWeight:FontWeight.bold)),
-            ),
+    return Column(
+      children: [
+        SizedBox(
+          // width: MediaQuery.of(context).size.width / 3,
+          child: Center(
+            child: Text('Education',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline4
+                    .copyWith(color: primaryColor, fontWeight:FontWeight.bold)),
           ),
-          Container(
-              // color:secondaryColor,
-              width: MediaQuery.of(context).size.width / 3,
-              height: 2 * MediaQuery.of(context).size.height / 3,
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Spacer(),
-                        Container(height: MediaQuery.of(context).size.height / 18,child: Text('SCROLL DOWN ↓',style: Theme.of(context).textTheme.subtitle1.copyWith(color:Colors.white))),
-                      ]
-                    ),
-                    EducationCard(
-                      education:'Bachelor of Technology Degree',
-                      schoolName:'INDIAN INSTITUTE OF ENGINEERING SCIENCE AND TECHNOLOGY, SHIBPUR',
-                      year:'2019 - Present',
-                      department:'Department of Electronics and Telecommunication Engineering',
-                      grade:'CGPA - 8.09 (As of 5th Semester)'
-                    ),
-                    SizedBox(height: MediaQuery.of(context).size.height / 18),
-                    SizedBox(height: MediaQuery.of(context).size.height / 18),
-                    EducationCard(
-                      education:'Senior Secondary Education (XII)',
-                      schoolName:'NAVY CHILDREN SCHOOL, MUMBAI',
-                      year:'2017 - 2018',
-                      department:null,
-                      grade:'Percentage - 87.8 %'
-                    ),
-                    SizedBox(height: MediaQuery.of(context).size.height / 18),
-                    SizedBox(height: MediaQuery.of(context).size.height / 18),
-                    EducationCard(
-                      education:'Secondary Education (X)',
-                      schoolName:'NAVY CHILDREN SCHOOL, MUMBAI',
-                      year:'2015 - 2016',
-                      department:null,
-                      grade:'CGPA - 9.8 / 10'
-                    ),
-                    SizedBox(height: 10),
-                  ],
-                ),
-              )),
-        ],
-      ),
+        ),
+        SizedBox(height: 75),
+        // Row(
+        //   children: [
+        //     Spacer(),
+        //     Container(height: MediaQuery.of(context).size.height / 18,child: Text('SCROLL DOWN ↓',style: Theme.of(context).textTheme.subtitle1.copyWith(color:Colors.white))),
+        //   ]
+        // ),
+        EducationCard(
+          education:'Bachelor of Technology Degree',
+          schoolName:'INDIAN INSTITUTE OF ENGINEERING SCIENCE AND TECHNOLOGY, SHIBPUR',
+          year:'2019 - Present',
+          department:'Department of Electronics and Telecommunication Engineering',
+          grade:'CGPA - 8.09 (As of 5th Semester)'
+        ),
+        SizedBox(height:25),
+        EducationCard(
+          education:'Senior Secondary Education (XII)',
+          schoolName:'NAVY CHILDREN SCHOOL, MUMBAI',
+          year:'2017 - 2018',
+          department:null,
+          grade:'Percentage - 87.8 %'
+        ),
+        SizedBox(height:25),
+        EducationCard(
+          education:'Secondary Education (X)',
+          schoolName:'NAVY CHILDREN SCHOOL, MUMBAI',
+          year:'2015 - 2016',
+          department:null,
+          grade:'CGPA - 9.8 / 10'
+        ),
+      ],
     );
   }
 }
@@ -90,8 +73,9 @@ class EducationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 4 * MediaQuery.of(context).size.height / 9,
-        width: 1 * MediaQuery.of(context).size.width / 3 - 25,
+        margin: EdgeInsets.symmetric(horizontal:defaultPadding),
+        // height: 4 * MediaQuery.of(context).size.height / 9,
+        width:double.infinity,
         decoration: BoxDecoration(
             color: bgColor,
             borderRadius: BorderRadius.circular(35),

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_app/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class Projects extends StatelessWidget {
   Projects({
@@ -25,54 +26,56 @@ class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: 2 * MediaQuery.of(context).size.width / 3,
+        // width: 2 * MediaQuery.of(context).size.width / 3,  
         child: Column(
           children: [
             Text('Projects',
                 style: Theme.of(context).textTheme.headline4.copyWith(
                     color: primaryColor, fontWeight: FontWeight.bold)),
-            SizedBox(height: 75-MediaQuery.of(context).size.height/18),
-            Container(
-              height: 5 * MediaQuery.of(context).size.height/6,
-              width: 4 * MediaQuery.of(context).size.width / 9,
-              child: SingleChildScrollView(
-                  // scrollDirection: Axis.horizontal,
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Spacer(),
-                          Container(height: MediaQuery.of(context).size.height / 18,child: Text('SCROLL DOWN ↓',style: Theme.of(context).textTheme.subtitle1.copyWith(color:Colors.white))),
-                        ]
-                      ),
-                      ProjectCard(
-                        title: 'COFFEE AROMA',
-                        techStack: 'Flutter, Firebase, Dart',
-                        about: about[0],
-                        url: url[0],
-                        period: 'June 2021 – Present'
-                      ),
-                      SizedBox(height: MediaQuery.of(context).size.height/18),
-                      SizedBox(height: MediaQuery.of(context).size.height/18),
-                      ProjectCard(
-                        title: 'TRAVEL MANIA',
-                        techStack: 'Java, MySQL, JDBC, Maven, JUnit, Mockito',
-                        about: about[2],
-                        url: url[2],
-                        period: 'September 2021'
-                      ),
-                      SizedBox(height: MediaQuery.of(context).size.height/18),
-                      SizedBox(height: MediaQuery.of(context).size.height/18),
-                      ProjectCard(
-                        title: 'PORTFOLIO APPLICATION',
-                        techStack: 'Flutter, Dart',
-                        about: about[1],
-                        url: url[1],
-                        period: 'April 2021'
-                      ),
-                      SizedBox(height: MediaQuery.of(context).size.height/18),
-                    ],
-                  )),
+            SizedBox(height: 75),
+            CarouselSlider(
+              items: [
+                // Row(
+                //   children: [
+                //     Spacer(),
+                //     Container(height: MediaQuery.of(context).size.height / 18,child: Text('SCROLL DOWN ↓',style: Theme.of(context).textTheme.subtitle1.copyWith(color:Colors.white))),
+                //   ]
+                // ),
+                ProjectCard(
+                  title: 'COFFEE AROMA',
+                  techStack: 'Flutter, Firebase, Dart',
+                  about: about[0],
+                  url: url[0],
+                  period: 'June 2021 – Present'
+                ),
+                // SizedBox(height: MediaQuery.of(context).size.height/18),
+                // SizedBox(height: MediaQuery.of(context).size.height/18),
+                ProjectCard(
+                  title: 'TRAVEL MANIA',
+                  techStack: 'Java, MySQL, JDBC, Maven, JUnit, Mockito',
+                  about: about[2],
+                  url: url[2],
+                  period: 'September 2021'
+                ),
+                // SizedBox(height: MediaQuery.of(context).size.height/18),
+                // SizedBox(height: MediaQuery.of(context).size.height/18),
+                ProjectCard(
+                  title: 'PORTFOLIO APPLICATION',
+                  techStack: 'Flutter, Dart',
+                  about: about[1],
+                  url: url[1],
+                  period: 'April 2021'
+                ),
+                // SizedBox(height: MediaQuery.of(context).size.height/18),
+              ],
+              options: CarouselOptions(
+                enlargeCenterPage: true,
+                autoPlay: true,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enableInfiniteScroll: true,
+                autoPlayAnimationDuration: Duration(milliseconds: 1200),
+                viewportFraction: 0.8,
+              ),
             )
           ],
         ));
@@ -95,8 +98,9 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 6 * MediaQuery.of(context).size.height / 9 - 25,
-        width: 4 * MediaQuery.of(context).size.width / 9 - 25,
+        margin: EdgeInsets.all(defaultPadding),
+        height: 6 * MediaQuery.of(context).size.height / 9,
+        width: 4 * MediaQuery.of(context).size.width / 9,
         decoration: BoxDecoration(
             color: bgColor,
             borderRadius: BorderRadius.circular(35),
@@ -118,7 +122,7 @@ class ProjectCard extends StatelessWidget {
               ), //BoxShadow
             ]),
         child: Padding(
-          padding: const EdgeInsets.all(defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal:defaultPadding),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

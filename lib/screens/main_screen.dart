@@ -64,6 +64,7 @@ class _MainScreenState extends State<MainScreen> {
           constraints: const BoxConstraints(maxWidth:maxWidth),
           child: Padding(
             padding: EdgeInsets.only(left: maxWidth/6, right: maxWidth/6,),
+            // padding:EdgeInsets.only(left: MediaQuery.of(context).size.width/6, right: MediaQuery.of(context).size.width/6),
             child: ScrollablePositionedList.builder(
                 itemScrollController: itemController,
                 itemCount: widget.children.length,

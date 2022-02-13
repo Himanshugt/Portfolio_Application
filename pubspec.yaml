@@ -42,7 +42,7 @@ dependencies:
   scrollable_positioned_list: ^0.2.3
   scroll_to_index: ^2.1.1
   flutter_native_splash: ^2.0.2
-
+  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:
