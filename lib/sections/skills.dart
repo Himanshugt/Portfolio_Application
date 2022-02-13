@@ -41,29 +41,17 @@ class Skills extends StatelessWidget {
             ),
           ],),
           SizedBox(height: 75),
-          Row(
-            children: [
-              // SizedBox(width:MediaQuery.of(context).size.width/9),
-              Expanded(
-                child: Column(
-                  children:const [
-                    AnimatedLinearProgressIndicator(
-                    percentage:0.80,label: 'Java',
-                    ),
-                    AnimatedLinearProgressIndicator(
-                      percentage:0.75,label: 'C++',
-                    ),
-                    AnimatedLinearProgressIndicator(
-                      percentage:0.60,label: 'Python',
-                    ),
-                    AnimatedLinearProgressIndicator(
-                      percentage:0.80,label: 'Dart',
-                    ),
-                  ]
-                ),
-              ),
-              // SizedBox(width:MediaQuery.of(context).size.width/9),
-            ],
+          AnimatedLinearProgressIndicator(
+          percentage:0.80,label: 'Java',
+          ),
+          AnimatedLinearProgressIndicator(
+            percentage:0.75,label: 'C++',
+          ),
+          AnimatedLinearProgressIndicator(
+            percentage:0.60,label: 'Python',
+          ),
+          AnimatedLinearProgressIndicator(
+            percentage:0.80,label: 'Dart',
           )
         ]
       )
