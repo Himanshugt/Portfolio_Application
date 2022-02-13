@@ -47,7 +47,7 @@ class CoverIntro extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height:MediaQuery.of(context).size.height/4),
-        Text('Hi,\nI\'m Himashu',
+        Text('Hi,\nI\'m Himanshu',
             style: Theme.of(context).textTheme.headline2.copyWith(
               fontSize: 78,
               fontWeight: FontWeight.w900,

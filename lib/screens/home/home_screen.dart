@@ -59,8 +59,8 @@ class CustomDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Divider(
-      indent: MediaQuery.of(context).size.width / 8,
-      endIndent: MediaQuery.of(context).size.width / 8,
+      // indent: MediaQuery.of(context).size.width / 8,
+      // endIndent: MediaQuery.of(context).size.width / 8,
       height: 20,
       thickness: 0.2,
       color: Colors.grey,
